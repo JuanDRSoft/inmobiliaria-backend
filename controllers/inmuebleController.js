@@ -2,7 +2,7 @@ import React from "react";
 import Usuario from "../models/Usuario.js";
 import Inmueble from "../models/Inmueble.js";
 
-const obtenerProyectos = async (req, res) => {
+const obtenerInmuebles = async (req, res) => {
   const inmuebles = await Inmueble.find({ req });
 
   res.json(inmuebles);
@@ -18,4 +18,4 @@ const nuevoInmueble = async (req, res) => {
   } catch (error) {}
 };
 
-export { nuevoInmueble, obtenerProyectos };
+export { nuevoInmueble, obtenerInmuebles };
