@@ -31,7 +31,8 @@ const inmueblesSchema = mongoose.Schema(
     foto6: { type: String, required: true, trim: true },
 
     //Datos de contacto
-    vendedor: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario" },
+    idVendedor: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario" },
+    vendedor: { type: String, required: true, trim: true },
     telefono: { type: Number, required: true, trim: true },
   },
   { timestamps: true }

@@ -10,7 +10,7 @@ const obtenerInmuebles = async (req, res) => {
 
 const nuevoInmueble = async (req, res) => {
   const inmueble = new Inmueble(req.body);
-  inmueble.vendedor = req.usuario._id;
+  inmueble.idVendedor = req.usuario._id;
 
   try {
     const inmuebleAlmacenado = await inmueble.save();
